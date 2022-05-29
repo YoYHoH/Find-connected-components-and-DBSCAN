@@ -1,0 +1,19 @@
+Description of these data file (./graph 1 filename):
+Used for strong connected components
+
+text file:
+	node
+	n					number of nodes (points)
+	edge
+	m					number of edges
+	data
+	a b					means an edges from a to b
+	c d
+	...
+	...
+	
+
+And all points need to be {0,1,2,...,n-1} 
+i.e. numbers bigger than n or smaller than 0 cannot appear in lines after the line "data"
+
+These files here are from SNAP 	http://snap.stanford.edu/data/index.html

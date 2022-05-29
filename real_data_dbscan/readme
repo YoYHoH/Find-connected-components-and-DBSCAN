@@ -1,0 +1,12 @@
+Description of data file:
+Used for (./graph 4 filename) dbscan
+
+text file:
+	n				means total number of points
+	x1 y1				means a point in 2D plan (x1,y1)
+	x2 y2
+	...
+	...
+	
+
+These two files here are from http://cs.uef.fi/mopsi/data/

@@ -1,0 +1,70 @@
+3 scripts, 	graph.cpp(principal), 
+		draw.py(for test purpose, for plot), 
+		findepsilon.py(to find appropriate value of epsilon for dbscan)
+
+g++ -o graph graph.cpp 		to compile the file
+
+./graph 1 filename			to test the question 1 with the data in the file.
+					(the file need to fit a strict structure, see "real_data_graph")
+					
+					the terminal will show the number of strong connected components.
+					and the result file will be saved in the file "result_scc1".
+
+./graph 2				to test the question 2
+					then enter the value of n	(total number of points)
+					then enter the value of p	(probability of each edge, P(e)=p)
+					
+					the terminal will show some information about the graph, 
+					and the result of strong connected components.
+					and the data will be saved in file "Mydatarandom2",
+					the result will be saved in file "result_scc2".				
+						
+./graph 3				to test the question 3 (random placement in 2D plan)
+					then enter the number of points
+					then enter the side length
+					then enter the values of epsilon and M, 
+					(in format "epsilon M" (with a space between two values)).
+					
+					the terminal will show some information about the graph and the result of dbscan,
+					the data of random graph will be saved in file "Mydatarandom3",
+					the result of dbscan will be saved in file "result_dbscan3".
+					
+					and if needed, uncomment line 662-667 in the main(),
+					to see the result of connected components of the graph, 
+					result will be saved in "result_scc3".
+					
+!!!				        EXPLANATION of Connected Components:
+					Here, we have some points in a 2D plan with parameter epsilon, 
+					we define a edge between every two points whose distance smaller than epsilon,
+					and in order to better compare with the result of dbscan,
+					we let every isolated point not to be a component.
+					
+					
+					
+./graph 4 filename			to test the question 3 with a data file.
+					(the data file need to fit a strict structure, see "real_data_dbscan")
+					then enter the values of epsilon and M, 
+					(in format "epsilon M" (with a space between two values)).
+					
+					the terminal will show some information about the graph and the result of dbscan.
+					the result of dbscan will be saved in file "result_dbscan4".
+					
+					
+					and if needed, uncomment line 685-690 in the main() 
+					to see the result of strong connected components of the graph, 
+					result will be saved in "result_scc4".
+					
+
+draw.py is used to plot the graph of dbscan(or connected components)
+command: python3 draw.py 
+please change the filename if needed
+and uncomment line 69-80 if you want to show the resul of connected components (result of ./graph 3 or ./graph 4 filename)
+
+findepsilon.py
+command: python3 findepsilon.py
+It needs to read a file (the same form as in ./graph 4 filename, "real_data_dbscan". "HA" is the data used in the rapport)
+please change the filename if needed.
+And it will plot a graph, we can choose the knee value (by eyes) as the appropriate epsilon for dbscan
+
+
+					
